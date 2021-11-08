@@ -1,6 +1,7 @@
-import React, {Fragment, useEffect, useState } from 'react';
+import React, {Fragment, useEffect, useState, useCallback } from 'react';
+import { Table } from 'react-bootstrap';
 
-function RevString(){
+function MultiFetch(){
   const [data, setData] = useState([]);
 
   const getData = ()=>{
@@ -37,7 +38,6 @@ function RevString(){
         return k;
       
     }).catch(err=>{
-      debugger;
       console.log(err)
     });
     
@@ -45,9 +45,15 @@ function RevString(){
 
   async function updateData(){
     let result = await getData();
-    debugger
     setData(result)
   }
+
+  // useCallback(()=>{
+  //   async function updateData(){
+  //     let result = await getData();
+  //     setData(result)
+  //   }
+  // })
 
   useEffect(()=>{
     updateData()  
@@ -55,7 +61,7 @@ function RevString(){
  
 const renderData = () => {
   if(data !== null){
-    return <table>
+    return <Table  striped bordered>
       <thead><tr><td>name</td><td>score</td></tr></thead>
       <tbody>
         {data && data.map((ele, i)=>{
@@ -65,7 +71,7 @@ const renderData = () => {
           </tr>
         })}
       </tbody>
-    </table>
+    </Table>
   }
 }
 
@@ -73,6 +79,7 @@ const renderData = () => {
 
   const renderView = () => {
     return <Fragment>
+      <p>Mutliple API call using promise and data Merge </p>
       {data.length > 0 && renderData()}      
       {data.length === 0 && []}      
     </Fragment>
@@ -81,4 +88,4 @@ const renderData = () => {
   return renderView();
 }
 
-export default RevString;
+export default MultiFetch;
