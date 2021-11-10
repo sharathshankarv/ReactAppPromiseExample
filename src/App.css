@@ -28,6 +28,19 @@
   color: #61dafb;
 }
 
+.card-body {
+  text-align: left;
+}
+
+.top-bottom-20 {
+  margin: 20px 0px;
+}
+
+.viewPort {
+  height: 86vh;
+  overflow-y: auto;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

@@ -1,4 +1,4 @@
-import React, {Fragment, useEffect, useState, useCallback } from 'react';
+import React, {Fragment, useState } from 'react';
 import { Table } from 'react-bootstrap';
 
 function MultiFetch(){
@@ -54,11 +54,7 @@ function MultiFetch(){
   //     setData(result)
   //   }
   // })
-
-  useEffect(()=>{
-    updateData()  
-  }, []);
- 
+   
 const renderData = () => {
   if(data !== null){
     return <Table  striped bordered>

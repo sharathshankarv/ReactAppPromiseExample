@@ -1,0 +1,7 @@
+export const tweetsConstants = {
+  throttleTime: 300 ,
+
+  SEARCH_TWEET_SUCCESS:"SEARCH_TWEET_SUCCESS",
+  SEARCH_TWEET_FAILURE:"SEARCH_TWEET_FAILURE"
+
+}
