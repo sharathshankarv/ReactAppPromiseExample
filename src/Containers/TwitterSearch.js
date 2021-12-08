@@ -73,7 +73,12 @@ const renderCard = (ele) => {
   if(ele.tweets.length > 0){
     return (
       ele.tweets.map((item, i)=>{
-        return <Card className="card top-bottom-20" ukey={item.id} ele={ele} item={item} likedislikefunc={handleLikeDislike} />      
+        return <Card 
+          className="card top-bottom-20" 
+          ukey={item.id} 
+          ele={ele} 
+          item={item} 
+          likedislikefunc={handleLikeDislike} />      
       })    
     )
   }
@@ -111,5 +116,6 @@ return (
   </Fragment>
   )
 }
+
 
 export default TwitterSearch;

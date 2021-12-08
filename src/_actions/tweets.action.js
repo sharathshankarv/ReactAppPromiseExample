@@ -56,3 +56,10 @@ function searchTweets(searchText){
   //   }
   // }
 }
+
+
+// userenters searchText -> 
+// dispatch action -> 
+// dipatch Object(type and payload) -> 
+// reducers(updte the state) -> 
+// handle the data inside comp

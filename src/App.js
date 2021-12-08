@@ -1,6 +1,7 @@
-// import Users from './Containers/Users';
-// import MultiFetch from './Containers/MultiFetch';
-import TwitterSearch from './Containers/TwitterSearch.js'
+import Users from './Containers/Users';
+import MultiFetch from './Containers/MultiFetch';
+import TwitterSearch from './Containers/TwitterSearch.js';
+import Counter from './Containers/Counter';
 import './App.css';
 import {Row, Col } from 'react-bootstrap';
 
@@ -9,12 +10,15 @@ function App() {
   return (
     <div className="App container">
       <Row>
-        {/* <Col sm={6}>
-          <Users />
+        <Col>
+          <Counter />
         </Col>
+        {/* <Col>
+          <Users />
+        </Col> */}
         
-        <Col><MultiFetch /></Col> */}
-        <Col sm={6}><TwitterSearch /></Col>
+        {/* <Col><MultiFetch /></Col> */}
+        <Col><TwitterSearch /></Col>
       </Row>     
     </div>
   );
